@@ -1,0 +1,5 @@
+package com.nexus.security.core;
+
+public class JwtTokenProvider {
+
+}

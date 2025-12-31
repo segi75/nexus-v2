@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    // 1. Nexus Framework Core & Web 모듈 연동
+    // 'api'를 사용하여 이 모듈을 쓰는 프로젝트가 Core 기능도 바로 쓸 수 있게 함
+    api project(':nexus-core')
+    
+    // 중요: 단순 starter-web 대신, 우리의 'nexus-web-starter'를 의존해야 
+    // Filter나 Interceptor 확장이 가능합니다.
+    implementation project(':nexus-web-starter')
+
+    // 2. Spring Boot 관제 도구 (Actuator, AOP)
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    
+    // 3. Observability (관찰성) 핵심 라이브러리 (Tracing + Metrics)
+    // [Tracing] 요청 흐름 추적 (TraceId, SpanId 생성) -> 기존 코드 유지
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+    
+    // [Metrics] 성능 지표 수집 (Prometheus 연동용) -> 추가 필요!
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+    
+    // 4. Utils
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+testDependencies {
+    implementation project(':nexus-test-starter')
+}

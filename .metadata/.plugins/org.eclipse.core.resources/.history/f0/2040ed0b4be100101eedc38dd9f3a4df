@@ -1,0 +1,5 @@
+package com.nexus.tx.annotation;
+
+public class TxRead {
+
+}

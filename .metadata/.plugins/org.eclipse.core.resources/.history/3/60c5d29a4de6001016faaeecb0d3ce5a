@@ -1,0 +1,5 @@
+package com.nexus.obs.tracing;
+
+public class NexusTraceIdFilter {
+
+}

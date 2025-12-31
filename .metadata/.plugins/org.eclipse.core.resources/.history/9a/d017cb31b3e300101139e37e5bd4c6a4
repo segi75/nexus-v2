@@ -1,0 +1,44 @@
+package com.nexus.migration.config;
+
+import org.springframework.boot.autoconfigure.flyway.FlywayConfigurationCustomizer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.support.JdbcUtils; // [중요] 스프링 표준 유틸 사용
+
+import javax.sql.DataSource;
+import java.sql.DatabaseMetaData;
+
+@Configuration
+public class NexusMigrationAutoConfiguration {
+
+    @Bean
+    public FlywayConfigurationCustomizer flywayConfigurationCustomizer(DataSource dataSource) {
+        return configuration -> {
+            // [변경] 삭제된 DatabaseDriver.fromDataSource() 대신 JdbcUtils 사용
+            // DB 제품명을 안전하게 가져옵니다.
+            String dbProductName = JdbcUtils.extractDatabaseMetaData(
+                dataSource, 
+                DatabaseMetaData::getDatabaseProductName
+            );
+            
+            // 기본값 설정
+            String migrationPath = "classpath:db/migration/common"; 
+
+            if (dbProductName != null) {
+                // 대소문자 무시하고 비교
+                String dbName = dbProductName.toLowerCase();
+                
+                if (dbName.contains("h2")) {
+                    migrationPath = "classpath:db/migration/h2";
+                } else if (dbName.contains("microsoft") || dbName.contains("sql server")) {
+                    migrationPath = "classpath:db/migration/mssql";
+                } else if (dbName.contains("mysql")) {
+                    migrationPath = "classpath:db/migration/mysql";
+                }
+            }
+            
+            // 결정된 경로를 Flyway에 설정
+            configuration.locations(migrationPath);
+        };
+    }
+}

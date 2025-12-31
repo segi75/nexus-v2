@@ -1,0 +1,5 @@
+package com.nexus.core.context;
+
+public class UserContextHolder {
+
+}

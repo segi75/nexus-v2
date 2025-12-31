@@ -1,0 +1,5 @@
+package com.nexusframework.obs.config;
+
+public class NexusObsConfig {
+
+}

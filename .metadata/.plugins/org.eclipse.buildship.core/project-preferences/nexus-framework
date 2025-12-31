@@ -1,0 +1,12 @@
+#
+#Wed Dec 31 01:03:18 KST 2025
+buildDir=build
+buildScriptPath=build.gradle
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+derivedResources=.gradle;build;nexus-bom/build;nexus-core/build;nexus-migration/build;nexus-mybatis-starter/build;nexus-obs-starter/build;nexus-sample-app/build;nexus-security-starter/build;nexus-test-starter/build;nexus-tx/build;nexus-web-starter/build
+gradleVersion=8.9
+hasAutoBuildTasks=false
+linkedResources=
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+managedNatures=
+subprojectPaths=nexus-bom;nexus-core;nexus-migration;nexus-mybatis-starter;nexus-obs-starter;nexus-sample-app;nexus-security-starter;nexus-test-starter;nexus-tx;nexus-web-starter

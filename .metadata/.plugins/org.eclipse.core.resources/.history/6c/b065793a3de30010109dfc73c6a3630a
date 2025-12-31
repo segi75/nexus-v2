@@ -1,0 +1,5 @@
+package com.nexus.security.dto;
+
+public class NexusUser {
+
+}

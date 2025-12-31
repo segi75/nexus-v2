@@ -1,0 +1,26 @@
+plugins {
+    id 'java-platform' // BOM을 만들기 위한 전용 플러그인
+}
+
+group = 'com.nexus'
+version = '2.5.0-SNAPSHOT' // NEXUS 버전도 2.5로 점프!
+
+repositories {
+    mavenCentral()
+}
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+
+        // Spring Boot의 모든 버전 정보를 우리 BOM이 흡수합니다.
+    	api platform('org.springframework.boot:spring-boot-dependencies:3.5.9')
+	    
+	    // 추가로 정하는 버전 규칙들
+	    constraints {
+	        api 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+	        // 여기에 향후 추가될 모든 라이브러리 버전을 정의합니다.
+	    }
+}

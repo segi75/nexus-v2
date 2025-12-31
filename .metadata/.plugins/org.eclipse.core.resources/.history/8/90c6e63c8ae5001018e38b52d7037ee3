@@ -1,0 +1,26 @@
+package com.nexus.sample.config;
+
+import org.mapstruct.factory.Mappers;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.nexus.sample.mapper.TestMapper;
+import com.nexus.sample.struct.BoardStruct;
+
+@Configuration
+public class NexusMapperConfig {
+
+    // [핵심] 스프링아, BoardStruct는 내가 직접 가져다 줄게. 이거 써!
+    @Bean
+    public BoardStruct boardStruct() {
+        return Mappers.getMapper(BoardStruct.class);
+    }
+
+    @Bean
+    public TestMapper testMapper() {
+        return Mappers.getMapper(TestMapper.class);
+    }
+    
+    // 앞으로 Mapper가 추가될 때마다 여기에 하나씩 @Bean으로 등록하면 됩니다.
+    // 빌드 꼬임이나 스캔 오류로부터 훨씬 자유로워집니다.
+}

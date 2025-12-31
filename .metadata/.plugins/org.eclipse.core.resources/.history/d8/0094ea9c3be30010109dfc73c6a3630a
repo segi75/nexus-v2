@@ -1,0 +1,22 @@
+pluginManagement {
+    // 1. build-logic을 플러그인 빌드로 포함 (여기가 핵심 위치!)
+    includeBuild 'build-logic'
+    
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'nexus-framework'
+
+// 2. 실제 모듈들 포함
+include 'nexus-bom'
+include 'nexus-core'
+include 'nexus-web-starter'
+include 'nexus-obs-starter'
+include 'nexus-mybatis-starter'
+include 'nexus-test-starter'
+include 'nexus-sample-app'
+// 트랜잭션 표준 정책 모듈
+include 'nexus-tx'

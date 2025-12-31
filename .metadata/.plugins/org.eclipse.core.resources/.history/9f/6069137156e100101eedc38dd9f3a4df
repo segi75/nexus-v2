@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: nexus-sample-api
+  datasource:
+    # 1차 검증은 가벼운 H2 메모리 DB로 진행
+    url: jdbc:h2:mem:nexus;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+# NEXUS 프레임워크 설정 (우리가 만든 설정!)
+nexus:
+  obs:
+    enabled: true
+    logging:
+      enabled: true # MDC 로깅 활성화
+  web:
+    response-wrap:
+      enabled: true # 표준 응답 래핑 활성화
+
+logging:
+  level:
+    com.nexus: DEBUG # 우리 프레임워크 로그를 자세히 보기 위함

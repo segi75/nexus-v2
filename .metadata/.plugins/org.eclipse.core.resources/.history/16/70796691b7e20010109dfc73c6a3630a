@@ -1,0 +1,5 @@
+package com.nexus.sample.service;
+
+public class BoardService {
+
+}

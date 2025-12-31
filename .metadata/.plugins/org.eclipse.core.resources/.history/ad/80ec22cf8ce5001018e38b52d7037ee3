@@ -1,0 +1,68 @@
+package com.nexus.mybatis.interceptor;
+
+import java.lang.reflect.Field;
+import java.time.LocalDateTime;
+import java.util.Properties;
+
+import org.apache.ibatis.executor.Executor;
+import org.apache.ibatis.mapping.MappedStatement;
+import org.apache.ibatis.mapping.SqlCommandType;
+import org.apache.ibatis.plugin.Interceptor;
+import org.apache.ibatis.plugin.Intercepts;
+import org.apache.ibatis.plugin.Invocation;
+import org.apache.ibatis.plugin.Signature;
+import org.springframework.stereotype.Component;
+
+import com.nexus.mybatis.dto.BaseDto; // 패키지명 수정됨
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Component
+@Intercepts({
+    @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})
+})
+public class AuditInterceptor implements Interceptor {
+
+    @Override
+    public Object intercept(Invocation invocation) throws Throwable {
+        Object[] args = invocation.getArgs();
+        MappedStatement ms = (MappedStatement) args[0];
+        Object param = args[1];
+
+        // 1. 파라미터가 BaseDto를 상속받았는지 확인
+        if (param instanceof BaseDto) {
+            BaseDto dto = (BaseDto) param;
+            SqlCommandType sqlCommandType = ms.getSqlCommandType();
+            
+            // TODO: 추후 시큐리티 연동 시 "SYSTEM" 대신 실제 사용자 ID 주입
+            String currentUserId = "SYSTEM"; 
+            LocalDateTime now = LocalDateTime.now();
+
+            // 2. INSERT: 등록자 + 수정자 모두 세팅
+            if (sqlCommandType == SqlCommandType.INSERT) {
+                dto.setRegId(currentUserId);
+                dto.setRegDt(now);
+                dto.setModId(currentUserId);
+                dto.setModDt(now);
+            }
+            
+            // 3. UPDATE: 수정자만 세팅
+            if (sqlCommandType == SqlCommandType.UPDATE) {
+                dto.setModId(currentUserId);
+                dto.setModDt(now);
+            }
+        }
+        
+        return invocation.proceed();
+    }
+
+    @Override
+    public Object plugin(Object target) {
+        return Interceptor.super.plugin(target);
+    }
+
+    @Override
+    public void setProperties(Properties properties) {
+    }
+}

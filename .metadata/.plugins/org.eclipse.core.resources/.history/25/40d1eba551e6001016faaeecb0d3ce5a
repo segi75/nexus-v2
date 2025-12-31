@@ -1,0 +1,5 @@
+package com.nexus.obs.aop;
+
+public class NexusPerformanceAspect {
+
+}

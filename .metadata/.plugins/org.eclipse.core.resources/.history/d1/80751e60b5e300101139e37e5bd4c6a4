@@ -1,0 +1,22 @@
+dependencies {
+    api project(':nexus-core')
+
+    // [필수] 스프링 시큐리티 & 웹 (이게 없어서 Authentication 등을 못 찾음)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    // [필수] JWT (토큰 처리용)
+    implementation libs.jjwt.api
+    runtimeOnly libs.jjwt.impl
+    runtimeOnly libs.jjwt.jackson
+
+    // [필수] Lombok (Getter/Setter/Slf4j 등)
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+    
+    // 설정 파일 처리 (@ConfigurationProperties)
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    
+    testImplementation libs.spring.boot.starter.test
+    testImplementation 'org.springframework.security:spring-security-test'
+}

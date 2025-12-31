@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    // 1. 우리 가족 (Core 필수)
+    api project(':nexus-core')
+
+    // 2. MyBatis & DB 필수 도구
+    // (버전은 nexus-bom이 관리하므로 적지 않습니다)
+    api 'org.mybatis.spring.boot:mybatis-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    // 3. DB 드라이버 (일단 범용적으로 MSSQL/MySQL 준비)
+    // 실제 프로젝트에서는 사용하는 DB 드라이버만 Runtime에 넣지만, 
+    // 스타터에서는 컴파일 시점 지원을 위해 열어둡니다.
+    compileOnly 'com.microsoft.sqlserver:mssql-jdbc'
+    compileOnly 'com.mysql:mysql-connector-j'
+
+    // 4. 편의 도구
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}

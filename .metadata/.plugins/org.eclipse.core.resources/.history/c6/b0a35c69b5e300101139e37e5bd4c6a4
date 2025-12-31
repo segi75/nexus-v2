@@ -1,0 +1,13 @@
+dependencies {
+    api project(':nexus-core')
+    
+    // [필수] 스프링 기본기 (Transaction, AOP, Context 등)
+    implementation libs.spring.boot.starter
+    // 트랜잭션 관리를 위해 명시적으로 추가해도 좋음 (보통 starter에 포함됨)
+    implementation 'org.springframework:spring-tx' 
+    
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+    
+    testImplementation libs.spring.boot.starter.test
+}

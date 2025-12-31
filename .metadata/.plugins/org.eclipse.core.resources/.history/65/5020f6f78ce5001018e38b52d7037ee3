@@ -1,0 +1,62 @@
+package com.nexus.mybatis.interceptor;
+
+import com.nexus.core.dto.NexusBaseDTO;
+import com.nexus.core.security.NexusAuditorAware;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.executor.Executor;
+import org.apache.ibatis.mapping.MappedStatement;
+import org.apache.ibatis.mapping.SqlCommandType;
+import org.apache.ibatis.plugin.*;
+
+import java.time.LocalDateTime;
+import java.util.Properties;
+
+@Slf4j
+@RequiredArgsConstructor
+@Intercepts({
+    @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})
+})
+public class AutoFillingInterceptor implements Interceptor {
+
+    private final NexusAuditorAware auditorAware;
+
+    @Override
+    public Object intercept(Invocation invocation) throws Throwable {
+        Object[] args = invocation.getArgs();
+        MappedStatement ms = (MappedStatement) args[0];
+        Object param = args[1];
+
+        // 1. 파라미터가 NexusBaseDTO를 상속받았는지 확인
+        if (param instanceof NexusBaseDTO) {
+            NexusBaseDTO dto = (NexusBaseDTO) param;
+            SqlCommandType sqlCommandType = ms.getSqlCommandType();
+            
+            // 2. 현재 사용자 ID 가져오기 (없으면 SYSTEM)
+            String currentUserId = auditorAware.getCurrentAuditor().orElse("SYSTEM");
+            LocalDateTime now = LocalDateTime.now();
+
+            // 3. INSERT 작업 시
+            if (sqlCommandType == SqlCommandType.INSERT) {
+                if (dto.getRegId() == null) dto.setRegId(currentUserId);
+                if (dto.getRegDt() == null) dto.setRegDt(now);
+                if (dto.getModId() == null) dto.setModId(currentUserId);
+                if (dto.getModDt() == null) dto.setModDt(now);
+            } 
+            // 4. UPDATE 작업 시
+            else if (sqlCommandType == SqlCommandType.UPDATE) {
+                dto.setModId(currentUserId);
+                dto.setModDt(now);
+            }
+        }
+        return invocation.proceed();
+    }
+
+    @Override
+    public Object plugin(Object target) {
+        return Plugin.wrap(target, this);
+    }
+
+    @Override
+    public void setProperties(Properties properties) {}
+}

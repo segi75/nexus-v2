@@ -1,0 +1,95 @@
+[versions]
+# --- 1. Core Base ---
+java = "25"
+springBoot = "3.5.9"
+dependencyManagement = "1.1.7"
+kotlin = "1.9.25"
+
+# --- 2. Persistence ---
+mybatis = "3.0.3"
+mssql = "12.6.1.jre11"
+mysql = "8.3.0"   # MySQL 버전 정의
+h2 = "2.2.224"
+
+# --- 3. Observability ---
+opentelemetry = "1.36.0"
+micrometer = "1.12.4"
+logbackEncoder = "7.4"
+
+# --- 4. Tools & Utils ---
+lombok = "1.18.30"
+jackson = "2.16.1"
+flyway = "10.10.0"
+jjwt = "0.12.5" 
+
+# --- 5. Testing ---
+junit = "5.10.2"
+mockito = "5.11.0"
+assertj = "3.25.3"
+archunit = "1.2.1"
+testcontainers = "1.19.7"
+
+[libraries]
+# ==========================================
+# A. 플러그인
+# ==========================================
+spring-boot-gradle-plugin = { group = "org.springframework.boot", name = "spring-boot-gradle-plugin", version.ref = "springBoot" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+spring-dependency-management-plugin = { group = "io.spring.gradle", name = "dependency-management-plugin", version.ref = "dependencyManagement" }
+
+# ==========================================
+# B. 런타임 라이브러리
+# ==========================================
+
+# --- B-1. Spring Boot Core ---
+spring-boot-starter = { group = "org.springframework.boot", name = "spring-boot-starter", version.ref = "springBoot" }
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springBoot" }
+spring-boot-starter-aop = { group = "org.springframework.boot", name = "spring-boot-starter-aop", version.ref = "springBoot" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation", version.ref = "springBoot" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "springBoot" }
+spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator", version.ref = "springBoot" }
+spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "springBoot" }
+
+# --- B-2. Persistence ---
+mybatis-starter = { group = "org.mybatis.spring.boot", name = "mybatis-spring-boot-starter", version.ref = "mybatis" }
+
+# [DB Drivers]
+mssql-jdbc = { group = "com.microsoft.sqlserver", name = "mssql-jdbc", version.ref = "mssql" }
+h2-database = { group = "com.h2database", name = "h2", version.ref = "h2" }
+# ▼▼▼ [복구] 아까 누락되었던 MySQL 드라이버 정의 ▼▼▼
+mysql-connector = { group = "com.mysql", name = "mysql-connector-j", version.ref = "mysql" }
+
+# --- B-3. Observability ---
+otel-bom = { group = "io.opentelemetry", name = "opentelemetry-bom", version.ref = "opentelemetry" }
+micrometer-registry-prometheus = { group = "io.micrometer", name = "micrometer-registry-prometheus", version.ref = "micrometer" }
+micrometer-tracing-bridge-otel = { group = "io.micrometer", name = "micrometer-tracing-bridge-otel", version.ref = "micrometer" }
+logback-encoder = { group = "net.logstash.logback", name = "logstash-logback-encoder", version.ref = "logbackEncoder" }
+
+# --- B-4. Utils ---
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+jackson-databind = { group = "com.fasterxml.jackson.core", name = "jackson-databind", version.ref = "jackson" }
+
+# [Flyway]
+flyway-core = { group = "org.flywaydb", name = "flyway-core", version.ref = "flyway" }
+flyway-sqlserver = { group = "org.flywaydb", name = "flyway-database-sqlserver", version.ref = "flyway" }
+# ▼▼▼ [복구] 아까 누락되었던 Flyway MySQL 플러그인 ▼▼▼
+flyway-mysql = { group = "org.flywaydb", name = "flyway-mysql", version.ref = "flyway" }
+
+# [Security]
+jjwt-api = { group = "io.jsonwebtoken", name = "jjwt-api", version.ref = "jjwt" }
+jjwt-impl = { group = "io.jsonwebtoken", name = "jjwt-impl", version.ref = "jjwt" }
+jjwt-jackson = { group = "io.jsonwebtoken", name = "jjwt-jackson", version.ref = "jjwt" }
+
+# --- B-5. Testing ---
+archunit = { group = "com.tngtech.archunit", name = "archunit-junit5", version.ref = "archunit" }
+testcontainers = { group = "org.testcontainers", name = "junit-jupiter", version.ref = "testcontainers" }
+# ▼▼▼ [복구] MySQL용 테스트 컨테이너 ▼▼▼
+mysql-testcontainer = { group = "org.testcontainers", name = "mysql", version.ref = "testcontainers" }
+
+[plugins]
+# ==========================================
+# C. 루트 플러그인
+# ==========================================
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+dependency-management = { id = "io.spring.dependency-management", version.ref = "dependencyManagement" }
+jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

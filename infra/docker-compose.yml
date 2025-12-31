@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  # --------------------------------
+  # 1. Backend (Java 21 + Gradle)
+  # --------------------------------
+  backend:
+    image: eclipse-temurin:21-jdk-alpine # [최적화] 가벼운 Alpine 리눅스 기반 Java 21
+    container_name: nexus_backend
+    working_dir: /app
+    volumes:
+      - ../backend:/app
+      - ~/.gradle:/root/.gradle
+    ports:
+      - "8080:8080"
+    entrypoint: ["/bin/sh", "-c"]
+    command: 
+      - |
+        chmod +x gradlew
+        ./gradlew bootRun --no-daemon # --no-daemon으로 메모리 절약
+    depends_on:
+      - mysql
+      - mssql
+    networks:
+      - nexus-net
+
+  # --------------------------------
+  # 2. Frontend (Nuxt 4 + Node 22)
+  # --------------------------------
+  frontend:
+    image: node:22-alpine # [변경] Nuxt 4를 위한 최신 Node 버전
+    container_name: nexus_frontend
+    working_dir: /app
+    volumes:
+      - ../frontend:/app
+      # node_modules는 컨테이너 내부 것을 우선시하여 호스트 OS와 충돌 방지
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    # [자동화] 패키지 설치 후 개발 서버 실행 (호스트 0.0.0.0 개방 필수)
+    command: sh -c "npm install && npm run dev -- -o --host 0.0.0.0"
+    networks:
+      - nexus-net
+
+  # --------------------------------
+  # 3. DB (기존 그대로 유지)
+  # --------------------------------
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: nexus_mssql
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=NexusPassword12!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./data/mssql:/var/opt/mssql
+    networks:
+      - nexus-net
+
+  mysql:
+    image: mysql:8.0
+    container_name: nexus_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: NexusPassword12!
+      MYSQL_DATABASE: nexus_core
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - nexus-net
+
+  adminer:
+    image: adminer
+    container_name: nexus_db_admin
+    ports:
+      - "8081:8080"
+    networks:
+      - nexus-net
+
+networks:
+  nexus-net:
+    driver: bridge

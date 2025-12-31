@@ -1,0 +1,5 @@
+package com.nesusframework.obs.filter;
+
+public class TraceIdFilter {
+
+}
