@@ -6362,3 +6362,1032 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IFile.
 
 !ENTRY com.microsoft.copilot.eclipse 1 0 2026-01-01 22:11:26.337
 !MESSAGE [Info] Completion handler is refreshed for the document: file:///D:/01.work/NEXUS/backend/src/main/java/com/nexus/backend/config/WebConfig.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:00.635
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 224.33950000070035 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:00.635
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:19:00.635
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '4c4bc8a1-f09a-4be1-a5ce-70014e51d554',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:19:00.635
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '4c4bc8a1-f09a-4be1-a5ce-70014e51d554',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:00.694
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [4c4bc8a1-f09a-4be1-a5ce-70014e51d554] model deployment ID: []
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-01-01 23:19:21.929
+!MESSAGE [Info] Document is null for editor: ApiResponse.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-01-01 23:19:21.930
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///D:/01.work/NEXUS/backend/src/main/java/com/nexus/backend/dto/ApiResponse.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:57.990
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 198.0433000009507 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:19:57.990
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'c253855d-80e0-4c8e-b4b7-80376a00ae60',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:19:57.991
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'c253855d-80e0-4c8e-b4b7-80376a00ae60',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:57.991
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:19:58.033
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [c253855d-80e0-4c8e-b4b7-80376a00ae60] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:25.879
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 122.23340000025928 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:25.879
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:20:25.879
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '66130843-d960-4a55-bc0c-0514ee9be2da',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:20:25.879
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '66130843-d960-4a55-bc0c-0514ee9be2da',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:25.926
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [66130843-d960-4a55-bc0c-0514ee9be2da] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:32.799
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 128.642899999395 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:32.799
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:20:32.799
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '321e7f57-3409-4340-90af-c288f345b502',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:20:32.799
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '321e7f57-3409-4340-90af-c288f345b502',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:20:32.847
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [321e7f57-3409-4340-90af-c288f345b502] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:21:28.292
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 129.89770000055432 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:21:28.292
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:21:28.292
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '73d26996-9807-454e-81fb-1baf23681a30',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:21:28.292
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '73d26996-9807-454e-81fb-1baf23681a30',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:21:28.352
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [73d26996-9807-454e-81fb-1baf23681a30] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:00.584
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 196.61290000006557 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:00.584
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:00.584
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'ff38a6e4-0dd4-4b26-a3aa-ce935b9c864f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:00.584
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'ff38a6e4-0dd4-4b26-a3aa-ce935b9c864f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:00.629
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [ff38a6e4-0dd4-4b26-a3aa-ce935b9c864f] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.531
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 131.27709999866784 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:25.531
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '541dece1-6146-4864-b3a5-0d0b6c0f2ede',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.531
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:25.531
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '541dece1-6146-4864-b3a5-0d0b6c0f2ede',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.576
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [541dece1-6146-4864-b3a5-0d0b6c0f2ede] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.798
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 120.01899999938905 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:25.798
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '99b3c5b9-a4aa-4e24-b1eb-fa64bbbe9e84',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.798
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:25.798
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '99b3c5b9-a4aa-4e24-b1eb-fa64bbbe9e84',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:25.847
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [99b3c5b9-a4aa-4e24-b1eb-fa64bbbe9e84] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:26.091
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 148.48650000058115 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:26.092
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '9a23955d-741e-4bef-935f-54835e99781d',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:26.149
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [9a23955d-741e-4bef-935f-54835e99781d] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:50:26.149
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '9a23955d-741e-4bef-935f-54835e99781d',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:50:26.149
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:08.513
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 136.44669999927282 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:08.514
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b1e1a8b8-a6ec-4036-be6f-b5a222b6fe2e',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:08.572
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b1e1a8b8-a6ec-4036-be6f-b5a222b6fe2e',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:08.572
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:08.572
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b1e1a8b8-a6ec-4036-be6f-b5a222b6fe2e',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:08.572
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b1e1a8b8-a6ec-4036-be6f-b5a222b6fe2e',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:08.572
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [b1e1a8b8-a6ec-4036-be6f-b5a222b6fe2e] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:12.912
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '7b22e785-a16a-41b9-90c8-07c026067eb1',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:12.912
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 131.0787000004202 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:12.980
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '7b22e785-a16a-41b9-90c8-07c026067eb1',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:12.980
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:12.980
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [7b22e785-a16a-41b9-90c8-07c026067eb1] model deployment ID: []
+
+!ENTRY org.eclipse.ui 4 0 2026-01-01 23:52:15.104
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4926)
+	at org.eclipse.swt.SWT.error(SWT.java:4860)
+	at org.eclipse.swt.SWT.error(SWT.java:4831)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.getLineAtOffset(DefaultDocumentAdapter.java:184)
+	at org.eclipse.swt.custom.StyledTextRenderer.hasLink(StyledTextRenderer.java:684)
+	at org.eclipse.swt.custom.StyledText.doMouseLinkCursor(StyledText.java:2319)
+	at org.eclipse.swt.custom.StyledText.doMouseLinkCursor(StyledText.java:2313)
+	at org.eclipse.swt.custom.StyledText.redraw(StyledText.java:7381)
+	at com.microsoft.copilot.eclipse.ui.utils.SwtUtils.lambda$2(SwtUtils.java:162)
+	at com.microsoft.copilot.eclipse.ui.utils.SwtUtils.invokeOnDisplayThread(SwtUtils.java:70)
+	at com.microsoft.copilot.eclipse.ui.utils.SwtUtils.redrawBlockLineAtModelOffset(SwtUtils.java:142)
+	at com.microsoft.copilot.eclipse.ui.completion.CompletionManager.caretMoved(CompletionManager.java:300)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:101)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4341)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1232)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1217)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:854)
+	at org.eclipse.swt.custom.StyledText.setCaretOffsets(StyledText.java:8603)
+	at org.eclipse.swt.custom.StyledText.reset(StyledText.java:7791)
+	at org.eclipse.swt.custom.StyledText.handleTextSet(StyledText.java:6157)
+	at org.eclipse.swt.custom.StyledText$5.textSet(StyledText.java:5410)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.fireTextSet(DefaultDocumentAdapter.java:332)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.resumeForwardingDocumentChanges(DefaultDocumentAdapter.java:371)
+	at org.eclipse.jface.text.TextViewer.enabledRedrawing(TextViewer.java:5025)
+	at org.eclipse.jface.text.TextViewer.enabledRedrawing(TextViewer.java:5012)
+	at org.eclipse.jface.text.TextViewer.setRedraw(TextViewer.java:5094)
+	at org.eclipse.jface.text.TextViewer.setRedraw(TextViewer.java:5068)
+	at org.eclipse.jface.text.TextViewer$RewriteTarget.setRedraw(TextViewer.java:1017)
+	at org.eclipse.jface.text.TextViewer$DocumentRewriteSessionListener.documentRewriteSessionChanged(TextViewer.java:1423)
+	at org.eclipse.jface.text.AbstractDocument.fireRewriteSessionChanged(AbstractDocument.java:1423)
+	at org.eclipse.jface.text.AbstractDocument.stopRewriteSession(AbstractDocument.java:1504)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.stopRewriteSession(SynchronizableDocument.java:203)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:1072)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1468)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaSourceViewer.doOperation(JavaSourceViewer.java:164)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor$AdaptedSourceViewer.doOperation(CompilationUnitEditor.java:206)
+	at org.eclipse.ui.texteditor.TextOperationAction.lambda$0(TextOperationAction.java:130)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:130)
+	at org.eclipse.jdt.internal.ui.actions.AddBlockCommentAction.runInternal(AddBlockCommentAction.java:80)
+	at org.eclipse.jdt.internal.ui.actions.BlockCommentAction.run(BlockCommentAction.java:213)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:124)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:299)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:233)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:204)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:320)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:581)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:662)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:451)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:104)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1343)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1207)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1232)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1217)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1259)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1255)
+	at org.eclipse.swt.widgets.Widget.wmKeyDown(Widget.java:1984)
+	at org.eclipse.swt.widgets.Control.WM_KEYDOWN(Control.java:5199)
+	at org.eclipse.swt.widgets.Canvas.WM_KEYDOWN(Canvas.java:402)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4797)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5109)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3725)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1464)
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:15.342
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 175.076400000602 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:15.343
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'fbba3589-12e4-40ef-92fc-d6ad0984c7ef',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:52:15.359
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'fbba3589-12e4-40ef-92fc-d6ad0984c7ef',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:15.359
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:52:15.359
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [fbba3589-12e4-40ef-92fc-d6ad0984c7ef] model deployment ID: []
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-01-01 23:54:30.567
+!MESSAGE [Info] Language ID not found for extension: gradle
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.448
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 171.19600000046194 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:54:31.449
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'd9dfc929-0352-4319-8999-5b773177dcb5',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.449
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:54:31.449
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'd9dfc929-0352-4319-8999-5b773177dcb5',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.492
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [d9dfc929-0352-4319-8999-5b773177dcb5] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.733
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 146.71839999966323 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:54:31.733
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b5a361e1-9be9-430e-8280-29a57166e406',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:54:31.810
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'b5a361e1-9be9-430e-8280-29a57166e406',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.810
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:54:31.810
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [b5a361e1-9be9-430e-8280-29a57166e406] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:35.655
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 180.93740000016987 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:35.655
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '12a5481d-9453-4398-89d6-046db3256e2f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:35.715
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '12a5481d-9453-4398-89d6-046db3256e2f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:35.715
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [12a5481d-9453-4398-89d6-046db3256e2f] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:35.715
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '12a5481d-9453-4398-89d6-046db3256e2f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:35.715
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '12a5481d-9453-4398-89d6-046db3256e2f',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:35.716
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:47.963
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '8dbb40d7-7e80-4f8e-adcb-d350717f7275',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:47.963
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 134.538200000301 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:48.028
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '8dbb40d7-7e80-4f8e-adcb-d350717f7275',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:48.028
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-01 23:57:48.028
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [8dbb40d7-7e80-4f8e-adcb-d350717f7275] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:48.028
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '8dbb40d7-7e80-4f8e-adcb-d350717f7275',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-01 23:57:48.028
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '8dbb40d7-7e80-4f8e-adcb-d350717f7275',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:05:01.926
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '59d38a63-4103-4ce8-aafa-7e7f42026e4b',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:05:01.926
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 372.37710000015795 ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:05:01.999
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [59d38a63-4103-4ce8-aafa-7e7f42026e4b] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:05:01.999
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '59d38a63-4103-4ce8-aafa-7e7f42026e4b',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:05:01.999
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2026-01-02 00:13:00.119
+!MESSAGE Classpath changed for project: backend
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.096
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 208.40269999951124 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.096
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.211
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.211
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.211
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.211
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.212
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.213
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.213
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.213
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.213
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.213
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.214
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '18cc87b8-26fc-4b9a-bec0-52f4ebc1c1a8',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.438
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 134.7662000004202 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.438
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'd90feecd-e4a1-46f3-827b-c53ad4178314',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.505
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'd90feecd-e4a1-46f3-827b-c53ad4178314',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.506
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [d90feecd-e4a1-46f3-827b-c53ad4178314] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:16:19.506
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:16:19.506
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: 'd90feecd-e4a1-46f3-827b-c53ad4178314',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:37:05.848
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 227.0547000002116 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:37:05.848
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '19ff9dcc-b3ec-43b2-bc82-e8a7c1786eb9',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:37:05.940
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:37:05.940
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [19ff9dcc-b3ec-43b2-bc82-e8a7c1786eb9] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:37:05.940
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '19ff9dcc-b3ec-43b2-bc82-e8a7c1786eb9',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:40:58.191
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '38a0e6ef-f32e-4e58-8dad-4836d16589f9',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:40:58.191
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 178.81039999984205 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:40:58.265
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '38a0e6ef-f32e-4e58-8dad-4836d16589f9',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:40:58.265
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:40:58.265
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [38a0e6ef-f32e-4e58-8dad-4836d16589f9] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:41:00.364
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '89899083-8352-4f49-9c5b-44a9ac5d3b79',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:41:00.364
+!MESSAGE [Info]	[fetchCompletions] request.response: [https://proxy.individual.githubcopilot.com/v1/engines/gpt-41-copilot/completions] took 133.74650000035763 ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:41:00.426
+!MESSAGE [Error]	[streamChoices] Request id invalid, should have "completionId" and "created": {
+  headerRequestId: '89899083-8352-4f49-9c5b-44a9ac5d3b79',
+  completionId: '',
+  created: 0,
+  serverExperiments: '',
+  deploymentId: ''
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:41:00.426
+!MESSAGE [Info]	[streamChoices] solution 0 returned. finish reason: [stop]
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-01-02 00:41:00.426
+!MESSAGE [Info]	[streamChoices] request done: headerRequestId: [89899083-8352-4f49-9c5b-44a9ac5d3b79] model deployment ID: []
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-01-02 00:41:10.391
+!MESSAGE Marker id 2525 not found.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/backend/src/main/resources/application.yml)[376]: java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:71)
+	at org.eclipse.core.internal.resources.Marker.getAttribute(Marker.java:116)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:263)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:86)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:54)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:149)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:999)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:62)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1072)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2113)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:3011)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:2033)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:2039)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:2006)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1488)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1394)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1355)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1488)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1449)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:102)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4114)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3730)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1464)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2026-01-02 00:41:10.392
+!MESSAGE Marker id 2525 not found.
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:71)
+	at org.eclipse.core.internal.resources.Marker.getAttribute(Marker.java:116)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:263)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:86)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:54)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:149)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:999)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:62)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1072)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2113)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:3011)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:2033)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:2039)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:2006)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1488)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1394)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1355)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1488)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1449)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:102)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4114)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3730)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1464)

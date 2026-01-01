@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// 아까 만든 공통 타입 import (경로 주의)
+import type { ApiResponse } from '~/types/common'
+
 // API 응답 타입 정의 (TS 사용 시)
 interface HelloVO {
   id: number;
