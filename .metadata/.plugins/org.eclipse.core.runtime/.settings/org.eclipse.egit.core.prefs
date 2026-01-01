@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\01.work\\NEXUS\\nexus-framework\\.git;
-GitRepositoriesView.GitDirectories.relative=nexus-framework\\.git;
+GitRepositoriesView.GitDirectories=D\:\\01.work\\NEXUS\\nexus-framework\\.git;D\:\\01.work\\NEXUS\\.git;
+GitRepositoriesView.GitDirectories.relative=nexus-framework\\.git;.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

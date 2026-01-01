@@ -13,7 +13,7 @@
 		</section>
 	</section>
 	<section name="org.eclipse.buildship.ui.wizard.project.import">
-		<item key="project_location" value="D:\01.work\NEXUS\nexus-framework"/>
+		<item key="project_location" value="D:\01.work\NEXUS\backend"/>
 		<item key="gradle_distribution" value="GRADLE_DISTRIBUTION(VERSION(9.4.0-milestone-3))"/>
 		<section name="ProjectImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="385"/>

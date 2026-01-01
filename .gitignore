@@ -32,3 +32,4 @@ frontend/.output/
 frontend/dist/
 frontend/*.log
 frontend/README.md
+/.metadata/

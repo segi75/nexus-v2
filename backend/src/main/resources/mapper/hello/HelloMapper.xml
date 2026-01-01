@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nexus.backend.domain.hello.HelloMapper">
+
+    <select id="selectHelloList" resultType="com.nexus.backend.domain.hello.HelloVO">
+        SELECT 
+            id,
+            message,
+            reg_dt
+        FROM 
+            TB_HELLO
+    </select>
+
+</mapper>

@@ -1,20 +1,20 @@
 spring:
   application:
     name: nexus-backend
-  
-  # 데이터베이스 연결 설정 (MySQL)
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # 중요: docker-compose의 서비스 이름(nexus_mysql)이 주소가 됩니다.
-    url: jdbc:mysql://nexus_mysql:3306/nexus_core?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/nexus_core?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
     username: root
     password: NexusPassword12!
 
-  # MyBatis 설정
-  mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    configuration:
-      map-underscore-to-camel-case: true
+mybatis:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8082
 
 logging:
   level:

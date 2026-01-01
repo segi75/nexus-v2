@@ -35,10 +35,11 @@ services:
       - ../frontend:/app
       # node_modules는 컨테이너 내부 것을 우선시하여 호스트 OS와 충돌 방지
       - /app/node_modules
+      - /app/.nuxt
     ports:
       - "3000:3000"
     # [자동화] 패키지 설치 후 개발 서버 실행 (호스트 0.0.0.0 개방 필수)
-    command: sh -c "npm install && npm run dev -- -o --host 0.0.0.0"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
     networks:
       - nexus-net
 
