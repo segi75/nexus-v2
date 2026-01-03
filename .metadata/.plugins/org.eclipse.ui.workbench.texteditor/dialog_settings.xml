@@ -6,6 +6,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="log4jdbc-log4j2"/>
 			<item value="AuditInterceptor"/>
 			<item value="org.mapstruct:mapstruct"/>
 			<item value="flyway"/>
@@ -13,7 +14,6 @@
 			<item value="mybatis"/>
 			<item value="flyway-mysql"/>
 			<item value="implementation libs.spring.boot.starter.web"/>
-			<item value="cla"/>
 		</list>
 		<list key="replacehistory">
 		</list>
