@@ -5,22 +5,27 @@ services:
   # 1. Backend (Java 21 + Gradle)
   # --------------------------------
   backend:
-    image: eclipse-temurin:21-jdk-alpine # [최적화] 가벼운 Alpine 리눅스 기반 Java 21
+    image: eclipse-temurin:21-jdk-alpine
     container_name: nexus_backend
     working_dir: /app
     volumes:
       - ../backend:/app
       - ~/.gradle:/root/.gradle
     ports:
-      - "8080:8080"
+      - "8082:8080"
+    environment:
+      - SPRING_DATASOURCE_CORE_JDBC_URL=jdbc:mysql://nexus_mysql:3306/nexus_core?serverTimezone=Asia/Seoul
+      - SPRING_DATASOURCE_SERVICE_JDBC_URL=jdbc:sqlserver://nexus_mssql:1433;databaseName=nexus_web;encrypt=false
     entrypoint: ["/bin/sh", "-c"]
     command: 
       - |
         chmod +x gradlew
-        ./gradlew bootRun --no-daemon # --no-daemon으로 메모리 절약
+        ./gradlew bootRun --no-daemon
     depends_on:
-      - mysql
-      - mssql
+      mysql:
+        condition: service_healthy
+      mssql:
+        condition: service_started # [변경] 헬스체크 완료를 기다리지 않고 서비스가 시작되면 즉시 실행
     networks:
       - nexus-net
 
@@ -28,39 +33,22 @@ services:
   # 2. Frontend (Nuxt 4 + Node 22)
   # --------------------------------
   frontend:
-    image: node:22-alpine # [변경] Nuxt 4를 위한 최신 Node 버전
+    image: node:22-alpine
     container_name: nexus_frontend
     working_dir: /app
     volumes:
       - ../frontend:/app
-      # node_modules는 컨테이너 내부 것을 우선시하여 호스트 OS와 충돌 방지
       - /app/node_modules
       - /app/.nuxt
     ports:
-      - "3000:3000"
-    # [자동화] 패키지 설치 후 개발 서버 실행 (호스트 0.0.0.0 개방 필수)
+      - "3001:3000"
     command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
     networks:
       - nexus-net
 
   # --------------------------------
-  # 3. DB (기존 그대로 유지)
+  # 3. MySQL (Framework DB)
   # --------------------------------
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: nexus_mssql
-    restart: always
-    environment:
-      - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=NexusPassword12!
-      - MSSQL_PID=Express
-    ports:
-      - "1433:1433"
-    volumes:
-      - ./data/mssql:/var/opt/mssql
-    networks:
-      - nexus-net
-
   mysql:
     image: mysql:8.0
     container_name: nexus_mysql
@@ -72,9 +60,43 @@ services:
       - "3306:3306"
     volumes:
       - ./data/mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pNexusPassword12!"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - nexus-net
 
+  # --------------------------------
+  # 4. MSSQL (Web Service DB)
+  # --------------------------------
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: nexus_mssql
+    user: root
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 4G # [자원 할당] PM님 요청사항 반영
+        reservations:
+          memory: 2G
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=NexusPassword12!
+      - MSSQL_PID=Express
+    ports:
+      - "14333:1433"
+    volumes:
+      - nexus_mssql_data:/var/opt/mssql
+    # [제거] 문제를 일으키던 SQL 기반 Healthcheck를 제거하여 무한 대기/에러 방지
+    networks:
+      - nexus-net
+
+  # --------------------------------
+  # 5. DB Admin (Adminer)
+  # --------------------------------
   adminer:
     image: adminer
     container_name: nexus_db_admin
@@ -83,6 +105,12 @@ services:
     networks:
       - nexus-net
 
+# --------------------------------
+# 공용 네트워크 및 볼륨 정의
+# --------------------------------
 networks:
   nexus-net:
     driver: bridge
+
+volumes:
+  nexus_mssql_data:
