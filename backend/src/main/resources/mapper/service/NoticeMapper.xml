@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nexus.backend.repository.service.NoticeMapper">
+    
+    <sql id="searchFrag">
+        <where>
+            <if test="keyword != null and keyword != ''">
+                <choose>
+                    <when test="searchType == 'TITLE'">
+                        AND TITLE LIKE '%' + #{keyword} + '%'
+                    </when>
+                    <when test="searchType == 'CONTENT'">
+                        AND CONTENT LIKE '%' + #{keyword} + '%'
+                    </when>
+                    <otherwise>
+                        AND (TITLE LIKE '%' + #{keyword} + '%' OR CONTENT LIKE '%' + #{keyword} + '%')
+                    </otherwise>
+                </choose>
+            </if>
+        </where>
+    </sql>
+    
+    <select id="countNoticeList" parameterType="com.nexus.backend.domain.common.NxSearchRequest" resultType="long">
+        SELECT COUNT(*)
+        FROM NX_NOTICE
+        <include refid="searchFrag" /> 
+    </select>
+
+    <select id="selectNoticeList" parameterType="com.nexus.backend.domain.common.NxSearchRequest" resultType="com.nexus.backend.domain.notice.NxNotice">
+        SELECT NOTICE_ID, 
+               TITLE, 
+               CONTENT, 
+               VIEW_COUNT, 
+               REG_DT
+        FROM NX_NOTICE
+        <include refid="searchFrag" /> ORDER BY NOTICE_ID DESC
+        OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
+    </select>
+    
+    <select id="getNoticeDetail" resultType="com.nexus.backend.domain.notice.NxNotice">
+        SELECT NOTICE_ID, 
+               TITLE, 
+               CONTENT, 
+               VIEW_COUNT, 
+               REG_DT
+        FROM NX_NOTICE
+        WHERE NOTICE_ID = #{noticeId}
+    </select>
+    
+    <insert id="insertNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
+        INSERT INTO NX_NOTICE (TITLE, CONTENT, VIEW_COUNT, REG_DT)
+        VALUES (#{title}, #{content}, 0, GETDATE())
+    </insert>
+    
+    <update id="updateNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
+        UPDATE NX_NOTICE
+        SET TITLE = #{title},
+            CONTENT = #{content}
+        WHERE NOTICE_ID = #{noticeId}
+    </update>
+
+    <delete id="deleteNotice">
+        DELETE FROM NX_NOTICE
+        WHERE NOTICE_ID = #{noticeId}
+    </delete>
+    
+</mapper>

@@ -1,5 +1,0 @@
-package com.nexus.security.resolver;
-
-public class NexusUserArgumentResolver {
-
-}

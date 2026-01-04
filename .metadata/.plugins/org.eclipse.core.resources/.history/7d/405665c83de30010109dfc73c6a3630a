@@ -1,5 +1,0 @@
-package com.nexus.security.annotation;
-
-public class CurrentUser {
-
-}

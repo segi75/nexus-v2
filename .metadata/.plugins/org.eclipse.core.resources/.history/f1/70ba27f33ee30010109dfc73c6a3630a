@@ -1,5 +1,0 @@
-package com.nexus.security.config;
-
-public class NexusSecurityAutoConfiguration {
-
-}

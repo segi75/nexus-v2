@@ -1,33 +1,33 @@
 <template>
-  <div class="home-container">
-    <h1>NEXUS Framework 2.0</h1>
-    <p>환영합니다. 현재 시스템 가동 중입니다.</p>
+  <div class="home-wrapper">
+    <h1>🏠 홈 화면</h1>
+    <p>NEXUS 프레임워크 초기 화면입니다.</p>
     
-    <div class="links">
-      <NuxtLink to="/hello" class="btn">
-        API 연동 테스트 (Hello World) 보러가기
-      </NuxtLink>
+    <div class="test-box">
+      <p>테마 엔진 테스트 버튼:</p>
+      <button class="nx-btn">Primary Button</button>
     </div>
   </div>
 </template>
 
 <style scoped>
-.home-container {
+.home-wrapper {
   text-align: center;
-  padding: 50px;
-  font-family: sans-serif;
+  margin-top: 50px;
 }
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #00dc82; /* Nuxt Green */
+
+.nx-btn {
+  /* 수정: var(변수명, 기본값) 형식을 사용하여 DB 연결 전에도 파란색이 나오도록 함 */
+  background-color: var(--nx-primary, #3B82F6); 
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: var(--nx-radius-base, 4px);
+  border: none;
+  cursor: pointer;
   font-weight: bold;
 }
-.btn:hover {
-  background-color: #00b368;
+
+.nx-btn:hover {
+  opacity: 0.9;
 }
 </style>

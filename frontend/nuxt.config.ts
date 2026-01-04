@@ -13,6 +13,12 @@ export default defineNuxtConfig({
   alias: {
     '~/types': fileURLToPath(new URL('./types', import.meta.url))
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false, // ★ 핵심: 폴더 이름(atoms 등)을 컴포넌트 이름에 붙이지 않음
+    },
+  ],
 
   // 2. 이제 TypeScript가 'tailwindcss' 속성을 올바르게 인식합니다.
   tailwindcss: {

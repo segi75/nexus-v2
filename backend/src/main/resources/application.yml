@@ -2,35 +2,57 @@ spring:
   application:
     name: nexus-backend
 
-    datasource:
-       core:
-          jdbc-url: ${SPRING_DATASOURCE_CORE_JDBC_URL}
-          username: root
-          password: NexusPassword12!
-          driver-class-name: com.mysql.cj.jdbc.Driver
-       service:
-          jdbc-url: ${SPRING_DATASOURCE_SERVICE_JDBC_URL}
-          username: sa
-          password: NexusPassword12!
-          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  # [수정] 인코딩 설정: server 하위에서 spring 하위로 이동 (Spring Boot 최신 버전 규격)
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
+  # [추가] 멀티 데이터소스 설정
+  datasource:
+    # 1. Core DB (MySQL): 프레임워크 설정, 코드 관리, 디자인 토큰
+    core:
+      jdbc-url: ${SPRING_DATASOURCE_CORE_JDBC_URL:jdbc:mysql://localhost:3306/nexus_core?serverTimezone=Asia/Seoul}
+      username: ${SPRING_DATASOURCE_CORE_USERNAME:root}
+      password: ${SPRING_DATASOURCE_CORE_PASSWORD:NexusPassword12!}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      hikari:
+        pool-name: HikariPool-Core
+        maximum-pool-size: 5
+
+    # 2. Service DB (MSSQL): 웹 서비스 데이터, 게시판 등
+    service:
+      jdbc-url: ${SPRING_DATASOURCE_SERVICE_JDBC_URL:jdbc:sqlserver://localhost:14333;databaseName=nexus_service;encrypt=false}
+      username: ${SPRING_DATASOURCE_SERVICE_USERNAME:sa}
+      password: ${SPRING_DATASOURCE_SERVICE_PASSWORD:NexusPassword12!}
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      hikari:
+        pool-name: HikariPool-Service
+        maximum-pool-size: 10
+
+# MyBatis 설정
 mybatis:
   mapper-locations: classpath*:/mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
+    default-executor-type: REUSE
 
+# 서버 설정 (포트만 유지)
 server:
   port: 8082
 
+# 로깅 전략: DX 및 에이전트 분석용
 logging:
-    level:
-      root: INFO
-      com.nexus: DEBUG
-
-      log4jdbc.log4j2: WARN
-      jdbc.sqlonly: OFF
-      jdbc.sqltiming: INFO
-      jdbc.audit: OFF
-      jdbc.resultset: OFF
-      jdbc.resultsettable: OFF
-      jdbc.connection: OFF
+  level:
+    root: INFO
+    com.nexus: DEBUG # NEXUS 프로젝트 코드 상세 로그
+    
+    # SQL 쿼리 로깅 (log4jdbc-log4j2 사용 시)
+    log4jdbc.log4j2: WARN
+    jdbc.sqlonly: OFF
+    jdbc.sqltiming: INFO   # SQL문과 실행 시간 출력 (권장)
+    jdbc.audit: OFF
+    jdbc.resultset: OFF
+    jdbc.resultsettable: OFF
+    jdbc.connection: OFF
