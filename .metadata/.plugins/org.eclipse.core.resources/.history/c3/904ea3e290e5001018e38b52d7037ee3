@@ -1,5 +1,0 @@
-package com.nexus.web.filter;
-
-public class UserContextFilter {
-
-}

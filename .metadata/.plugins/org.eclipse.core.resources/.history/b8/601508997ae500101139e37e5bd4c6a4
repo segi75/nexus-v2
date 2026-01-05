@@ -1,5 +1,0 @@
-package com.nexus.security.core;
-
-public class SpringSecurityAuditorAware {
-
-}

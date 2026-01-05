@@ -1,5 +1,0 @@
-package com.nexus.core.security;
-
-public class NexusAuditorAware {
-
-}

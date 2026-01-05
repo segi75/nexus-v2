@@ -12,9 +12,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
+import com.nexus.backend.global.annotation.ServiceMapper; // ★ 명찰 임포트
+
 @Configuration
 @MapperScan(
-    basePackages = "com.nexus.backend.repository.service",
+    basePackages = "com.nexus.backend.domain", // 1. 도메인 패키지 전체 스캔
+    annotationClass = ServiceMapper.class,     // 2. @ServiceMapper 붙은 녀석만 내 식구다!
     sqlSessionFactoryRef = "serviceSqlSessionFactory"
 )
 public class ServiceDataSourceConfig {
@@ -34,6 +37,7 @@ public class ServiceDataSourceConfig {
         config.setMapUnderscoreToCamelCase(true);
         bean.setConfiguration(config);
         
+        // XML 위치 유지
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/service/*.xml"));
         return bean.getObject();
     }

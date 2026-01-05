@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.nexus.backend.repository.service.NoticeMapper">
+<mapper namespace="com.nexus.backend.domain.notice.mapper.NoticeMapper">
     
     <sql id="searchFrag">
         <where>
@@ -48,16 +48,28 @@
     </select>
     
     <insert id="insertNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
-        INSERT INTO NX_NOTICE (TITLE, CONTENT, VIEW_COUNT, REG_DT)
-        VALUES (#{title}, #{content}, 0, GETDATE())
-    </insert>
+	    INSERT INTO TB_NOTICE (
+	        title, 
+	        content, 
+	        view_count,
+	        reg_id, 
+	        reg_dt,       mod_id, 
+	        mod_dt
+	    ) VALUES (
+	        #{title}, 
+	        #{content}, 
+	        0,
+	        #{regId},     GETDATE(),    #{regId},     GETDATE()     )
+	</insert>
     
     <update id="updateNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
-        UPDATE NX_NOTICE
-        SET TITLE = #{title},
-            CONTENT = #{content}
-        WHERE NOTICE_ID = #{noticeId}
-    </update>
+	    UPDATE TB_NOTICE 
+	    SET 
+	        title = #{title},
+	        content = #{content},
+	        mod_id = #{regId},    mod_dt = GETDATE()    WHERE 
+	        notice_id = #{noticeId}
+	</update>
 
     <delete id="deleteNotice">
         DELETE FROM NX_NOTICE

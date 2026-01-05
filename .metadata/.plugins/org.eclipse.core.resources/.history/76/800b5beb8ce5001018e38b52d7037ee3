@@ -1,5 +1,0 @@
-package com.nexus.mybatis.interceptor;
-
-public class NexusAuditorAware {
-
-}

@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.nexus.backend.domain.system.mapper.TokenMapper;
 import com.nexus.backend.domain.token.NxDesignToken;
-import com.nexus.backend.repository.core.TokenMapper;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

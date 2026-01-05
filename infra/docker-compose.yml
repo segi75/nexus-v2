@@ -4,30 +4,30 @@ services:
   # --------------------------------
   # 1. Backend (Java 21 + Gradle)
   # --------------------------------
-  backend:
-    image: eclipse-temurin:21-jdk-alpine
-    container_name: nexus_backend
-    working_dir: /app
-    volumes:
-      - ../backend:/app
-      - ~/.gradle:/root/.gradle
-    ports:
-      - "8082:8080"
-    environment:
-      - SPRING_DATASOURCE_CORE_JDBC_URL=jdbc:mysql://nexus_mysql:3306/nexus_core?serverTimezone=Asia/Seoul
-      - SPRING_DATASOURCE_SERVICE_JDBC_URL=jdbc:sqlserver://nexus_mssql:1433;databaseName=nexus_web;encrypt=false
-    entrypoint: ["/bin/sh", "-c"]
-    command: 
-      - |
-        chmod +x gradlew
-        ./gradlew bootRun --no-daemon
-    depends_on:
-      mysql:
-        condition: service_healthy
-      mssql:
-        condition: service_started # [변경] 헬스체크 완료를 기다리지 않고 서비스가 시작되면 즉시 실행
-    networks:
-      - nexus-net
+  #backend:
+  #  image: eclipse-temurin:21-jdk-alpine
+  #  container_name: nexus_backend
+  #  working_dir: /app
+  #  volumes:
+  #    - ../backend:/app
+  #    - ~/.gradle:/root/.gradle
+  #  ports:
+  #    - "8082:8080"
+  #  environment:
+  #    - SPRING_DATASOURCE_CORE_JDBC_URL=jdbc:mysql://nexus_mysql:3306/nexus_core?serverTimezone=Asia/Seoul
+  #    - SPRING_DATASOURCE_SERVICE_JDBC_URL=jdbc:sqlserver://nexus_mssql:1433;databaseName=nexus_web;encrypt=false
+  #  entrypoint: ["/bin/sh", "-c"]
+  #  command: 
+  #    - |
+  #      chmod +x gradlew
+  #      ./gradlew bootRun --no-daemon
+  #  depends_on:
+  #    mysql:
+  #      condition: service_healthy
+  #    mssql:
+  #      condition: service_started # [변경] 헬스체크 완료를 기다리지 않고 서비스가 시작되면 즉시 실행
+  #  networks:
+  #    - nexus-net
 
   # --------------------------------
   # 2. Frontend (Nuxt 4 + Node 22)
