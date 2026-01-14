@@ -19,7 +19,7 @@ const keyword = ref((route.query.keyword as string) || '');
 
 // 2. 데이터 가져오기 (표준 응답 객체 NxResponse 적용)
 // 변수명을 data -> response 로 변경하여 헷갈림 방지
-const { data: response, status, refresh } = await useFetch<NxResponse<PageResult>>('http://localhost:8082/api/v1/notices', {
+const { data: response, status, refresh } = await useFetch<NxResponse<PageResult>>('http://localhost:8083/api/v1/notices', {
   query: { 
     page: page, 
     size: 5, 

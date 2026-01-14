@@ -20,20 +20,21 @@
         </where>
     </sql>
     
-    <select id="countNoticeList" parameterType="com.nexus.backend.domain.common.NxSearchRequest" resultType="long">
+    <select id="countNoticeList" parameterType="com.nexus.backend.common.dto.SearchDto" resultType="long">
         SELECT COUNT(*)
-        FROM NX_NOTICE
+        FROM TB_NOTICE 
         <include refid="searchFrag" /> 
     </select>
 
-    <select id="selectNoticeList" parameterType="com.nexus.backend.domain.common.NxSearchRequest" resultType="com.nexus.backend.domain.notice.NxNotice">
+    <select id="selectNoticeList" parameterType="com.nexus.backend.common.dto.SearchDto" resultType="com.nexus.backend.domain.notice.NxNotice">
         SELECT NOTICE_ID, 
                TITLE, 
                CONTENT, 
                VIEW_COUNT, 
                REG_DT
-        FROM NX_NOTICE
-        <include refid="searchFrag" /> ORDER BY NOTICE_ID DESC
+        FROM TB_NOTICE
+        <include refid="searchFrag" /> 
+        ORDER BY NOTICE_ID DESC
         OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
     </select>
     
@@ -43,36 +44,43 @@
                CONTENT, 
                VIEW_COUNT, 
                REG_DT
-        FROM NX_NOTICE
+        FROM TB_NOTICE
         WHERE NOTICE_ID = #{noticeId}
     </select>
     
     <insert id="insertNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
-	    INSERT INTO TB_NOTICE (
-	        title, 
-	        content, 
-	        view_count,
-	        reg_id, 
-	        reg_dt,       mod_id, 
-	        mod_dt
-	    ) VALUES (
-	        #{title}, 
-	        #{content}, 
-	        0,
-	        #{regId},     GETDATE(),    #{regId},     GETDATE()     )
-	</insert>
+        INSERT INTO TB_NOTICE (
+            title, 
+            content, 
+            view_count,
+            reg_id, 
+            reg_dt,
+            mod_id, 
+            mod_dt
+        ) VALUES (
+            #{title}, 
+            #{content}, 
+            0,
+            #{regId},     
+            GETDATE(),    
+            #{regId},     
+            GETDATE()     
+        )
+    </insert>
     
     <update id="updateNotice" parameterType="com.nexus.backend.domain.notice.NxNotice">
-	    UPDATE TB_NOTICE 
-	    SET 
-	        title = #{title},
-	        content = #{content},
-	        mod_id = #{regId},    mod_dt = GETDATE()    WHERE 
-	        notice_id = #{noticeId}
-	</update>
+        UPDATE TB_NOTICE 
+        SET 
+            title = #{title},
+            content = #{content},
+            mod_id = #{regId},
+            mod_dt = GETDATE()
+        WHERE 
+            notice_id = #{noticeId}
+    </update>
 
     <delete id="deleteNotice">
-        DELETE FROM NX_NOTICE
+        DELETE FROM TB_NOTICE
         WHERE NOTICE_ID = #{noticeId}
     </delete>
     

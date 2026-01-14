@@ -37,6 +37,11 @@ spring:
         pool-name: HikariPool-Service
         maximum-pool-size: 10
 
+jwt:
+  secret: "NEXUS_FRAMEWORK_V3_SECRET_KEY_MUST_BE_VERY_LONG_AND_SECURE_FOR_HS512"
+  expiration: 3600000 # 1시간 (밀리초 단위)
+  refresh-expiration: 86400000 # 24시간
+
 # MyBatis 설정
 mybatis:
   mapper-locations: classpath*:/mapper/**/*.xml
